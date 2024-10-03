@@ -12,7 +12,6 @@ import pandas as pd
 
 from sklearn.preprocessing import MinMaxScaler
 from matplotlib import pyplot as plt
-
 from kmodes.kprototypes import KPrototypes  
 from kmodes.kmodes import KModes
 
@@ -31,7 +30,6 @@ df.tail()
 
 
 # In[5]:
-
 
 
 df.isnull().sum()
@@ -59,9 +57,6 @@ df['Income'] = scaler.transform(df[['Income']])
 
 
 # In[8]:
-
-
-# Drop ID before analysis..
 
 df = df.drop(['ID'], axis=1)
 
@@ -118,7 +113,6 @@ df[df['cluster']== 0].head(10)
 
 
 # In[14]:
-
 
 
 df1 = df[df.cluster==0]
